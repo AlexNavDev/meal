@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="./img/food.png">
+
+    <title>The Meal</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Recipe book</h1>
+
+            <nav class="nav_bar">
+                <form action="" id="form__search">
+                    <input type="text" name="search" class="search" placeholder="Meal" autocomplete="off" required
+                        title="Only accepts letters and blanks" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                    <input type="submit" value="Search" class="btn-search" id="btn-search">
+                </form>
+            </nav>
+
+            <input type="button" value="Favorite" class="btn-favorite">
+            <select name="categories" id="categories">
+            </select>
+        </header>
+
+        <div class="total__food">
+        </div>
+
+        <main>
+            <div class="error"></div>
+            <div class="loader">
+                <img src="./img/oval.svg" alt="">
+            </div>
+
+            <section class="random__meal">
+            </section>
+
+            <section class="search__meal">
+                <template id="template-card">
+                    <div class="cards">
+                        <div class="card__header">
+                            <h2></h2>
+                        </div>
+
+                        <div class="card__body">
+                            <p class="origin"></p>
+                            <p class="category"></p>
+                        </div>
+
+                        <div class="card__image">
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="card__footer">
+                            <input type="button" value="See more" class="btn-see-more">
+                            <button class="btn-icon-heart"><i class="fa fa-heart"></i></button>
+                        </div>
+                    </div>
+                </template>
+            </section>
+
+            <section class="categories__meal">
+                <template id="template__card-categories">
+                    <div class="cards__categories">
+                        <div class="card__header">
+                            <h2></h2>
+                        </div>
+
+                        <div class="card__image">
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="card__footer">
+                            <input type="button" value="See more" class="btn-see-more">
+                            <button class="btn-icon-heart"><i class="fa fa-heart"></i></button>
+                        </div>
+                    </div>
+                </template>
+            </section>
+
+            <section class="modal">
+            </section>
+
+            <section class="favorite__meal">
+                <div class="title">
+                    <h2>Favorite Meals</h2>
+                </div>
+
+                <table id="favorites__table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Photo</th>
+                            <th>Info.</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+
+                </table>
+            </section>
+
+        </main>
+
+        <footer>
+        </footer>
+
+    </div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>

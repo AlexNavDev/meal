@@ -1,0 +1,421 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(../img/ladrillos-min.jpg);
+  background-size: contain;
+}
+
+.error {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 200px 0;
+  display: none;
+}
+
+.container {
+  width: 95%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 20px;
+}
+.loader img {
+  width: 25%;
+}
+
+.header {
+  height: 180px;
+  background-image: url(../img/madera-min.jpg);
+  color: #cdab81;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header .nav_bar .span-error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+.header .nav_bar .is-active {
+  display: block;
+  animation: show-message 0.5s 1 normal 0s ease-out both;
+}
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.header .search {
+  height: 30px;
+}
+.header .btn-favorite {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-search,
+.btn-favorite,
+.btn-see-more,
+#categories {
+  width: 6.5rem;
+  height: 30px;
+}
+
+.favorite__meal, .categories__meal, .search__meal, .random__meal {
+  height: auto;
+  margin-top: 20px;
+}
+
+.categories__meal .cards__categories .card__header, .search__meal .cards .card__header {
+  height: auto;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.modal .modal__container, .categories__meal .cards__categories, .search__meal .cards, .random__meal .card__random {
+  background-image: url(../img/madera-min.jpg);
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.categories__meal .cards__categories .card__footer, .search__meal .cards .card__footer, .random__meal .card__footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+  padding: 15px 0;
+}
+
+.categories__meal .cards__categories .card__footer .btn-icon-heart, .search__meal .cards .card__footer .btn-icon-heart, .random__meal .card__footer .btn-icon-heart {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  color: #ffff;
+}
+
+.random__meal .card__image {
+  position: relative;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .random__meal .card__image {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .random__meal .card__image {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .random__meal .card__image {
+    width: 50%;
+  }
+}
+@media (min-width: 1400px) {
+  .random__meal .card__image {
+    width: 30%;
+  }
+}
+.random__meal .card__image span {
+  position: absolute;
+  width: 160px;
+  height: 40px;
+  padding: 10px 10px;
+  top: 1rem;
+  font-weight: bold;
+  background-color: #ffff;
+}
+@media (min-width: 768px) {
+  .random__meal .card__image span {
+    top: 3rem;
+  }
+}
+.random__meal .card__name {
+  height: auto;
+  background-color: #4f4a45;
+  color: #cdab81;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .random__meal .card__name {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .random__meal .card__footer {
+    justify-content: space-evenly;
+  }
+}
+.total__food {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .search__meal {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .search__meal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .search__meal .cards .card__header h2 {
+    font-size: 2rem;
+  }
+}
+.search__meal .cards .card__body {
+  height: 60px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+.search__meal .cards .card__body span {
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .search__meal .cards .card__body {
+    height: 80px;
+  }
+  .search__meal .cards .card__body p {
+    font-size: 1.1rem;
+    padding: 5px 0;
+  }
+}
+.search__meal .cards .card__image {
+  width: 90%;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .search__meal .cards .card__image {
+    width: 70%;
+  }
+  .search__meal .cards .card__image img {
+    border-radius: 30px 0 30px 0;
+  }
+}
+@media (min-width: 768px) {
+  .search__meal .cards .card__footer {
+    padding: 30px 0;
+    justify-content: space-evenly;
+  }
+}
+.active {
+  color: #a01;
+}
+
+@media (min-width: 768px) {
+  .categories__meal {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .categories__meal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.categories__meal .cards__categories .card__image {
+  width: 90%;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .categories__meal .cards__categories .card__image {
+    width: 70%;
+  }
+  .categories__meal .cards__categories .card__image img {
+    border-radius: 30px 0 30px 0;
+  }
+}
+@media (min-width: 768px) {
+  .categories__meal .cards__categories .card__footer {
+    padding: 30px 0;
+    justify-content: space-evenly;
+  }
+}
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  overflow-y: scroll;
+}
+.modal .modal__container {
+  width: 90%;
+  max-width: 1800px;
+  margin: auto;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .modal .modal__container {
+    width: 70%;
+  }
+}
+.modal .modal__container .modal__header {
+  height: auto;
+  padding: 20px 0;
+}
+.modal .modal__container .modal__header h2 {
+  font-size: 1.6rem;
+}
+.modal .modal__container .modal__body .modal__image {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .modal .modal__container .modal__body .modal__image {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .modal .modal__container .modal__body .modal__image {
+    width: 30%;
+  }
+}
+.modal .modal__container .modal__body .modal__info .ingredients {
+  margin-bottom: 20px;
+}
+.modal .modal__container .modal__body .modal__info .ingredients h2 {
+  margin-bottom: 10px;
+}
+.modal .modal__container .modal__body .modal__info .ingredients ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .modal .modal__container .modal__body .modal__info .ingredients ul {
+    font-size: 1rem;
+  }
+}
+.modal .modal__container .modal__body .modal__info .preparation {
+  text-align: left;
+  line-height: 25px;
+  padding: 15px;
+  font-weight: 800;
+}
+.modal .modal__container .modal__body .modal__info .preparation h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.modal .modal__container .modal__footer .btn-close-modal {
+  width: 100px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.favorite__meal {
+  text-align: center;
+}
+.favorite__meal .title {
+  height: 60px;
+  padding: 10px 0;
+  background-image: url(../img/madera-min.jpg);
+  color: #cdab81;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 1200px) {
+  .favorite__meal #favorites__table {
+    width: 80%;
+    margin: auto;
+  }
+  .favorite__meal #favorites__table tbody td {
+    width: auto;
+  }
+  .favorite__meal #favorites__table tbody td:nth-child(2) img {
+    width: 50%;
+  }
+}
+.favorite__meal #favorites__table thead th {
+  background-color: #cdab81;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+.favorite__meal #favorites__table tbody tr:nth-child(odd) {
+  background-color: #dac3b3;
+}
+.favorite__meal #favorites__table tbody tr:nth-child(even) {
+  background-color: #cdab81;
+}
+.favorite__meal #favorites__table tbody td {
+  font-weight: bold;
+}
+@media (min-width: 576px) {
+  .favorite__meal #favorites__table tbody td:nth-child(2) {
+    width: 30%;
+  }
+}
+.favorite__meal #favorites__table .btn-see-more,
+.favorite__meal #favorites__table .btn-delete {
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

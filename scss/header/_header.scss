@@ -1,0 +1,91 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: $backgroundMain;
+  background-size: contain;
+}
+
+.error {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 200px 0;
+  display: none;
+}
+
+.container {
+  width: 95%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 20px;
+
+  img {
+    width: 25%;
+  }
+}
+
+.header {
+  height: 180px;
+  background-image: $background;
+  color: $colorPrimary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .nav_bar {
+    .span-error {
+      color: red;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .is-active {
+      display: block;
+      animation: show-message 0.5s 1 normal 0s ease-out both;
+    }
+
+    @keyframes show-message {
+      0% {
+        visibility: hidden;
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px #000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .search {
+    height: 30px;
+  }
+
+  .btn-favorite {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-search,
+.btn-favorite,
+.btn-see-more,
+#categories {
+  width: 6.5rem;
+  height: 30px;
+}
